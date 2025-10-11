@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ragaventhiran - Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+
     <style>
         * {
             margin: 0;
@@ -60,6 +62,12 @@
         nav a:hover {
             color: #64ffda;
             text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 1rem;
+            vertical-align: middle;
         }
 
         .menu-toggle {
@@ -121,6 +129,12 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
+        .hero p i {
+            margin: 0 8px;
+            font-size: 1.2rem;
+            vertical-align: middle;
+        }
+
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -141,40 +155,50 @@
             box-shadow: 0 6px 20px rgba(255,255,255,0.4);
             background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
         }
+
+        .btn i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            vertical-align: middle;
+        }
+
         .resume-btn-container {
-    display: flex;
-    justify-content: center; /* horizontally center */
-    align-items: center;     /* vertically center if div has height */
-    margin-top: 2rem;        /* spacing from top */
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
 
-     .btn2 {
-    display: inline-flex;  /* makes align-items and justify-content work */
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    color: #667eea;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: fadeInUp 1s 0.4s backwards;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
+        .btn2 {
+            display: inline-flex;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s 0.4s backwards;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
 
-
-
-        .btn:hover {
+        .btn2:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255,255,255,0.4);
             background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
         }
 
+        .btn2 i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            vertical-align: middle;
+        }
+
         /* Sections */
         section {
             padding: 80px 20px;
-            /* max-width: 1200px; */
             width: 100%;
             margin: 0 auto;
         }
@@ -398,6 +422,13 @@
             font-size: 1.1rem;
         }
 
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #667eea;
+            min-width: 30px;
+            display: inline-block;
+        }
+
         .contact-item a {
             color: #667eea;
             text-decoration: none;
@@ -421,15 +452,24 @@
         .social-links a {
             color: #2c3e50;
             font-size: 2rem;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
 
         .social-links a:hover {
             transform: translateY(-5px);
             filter: drop-shadow(0 5px 10px rgba(102, 126, 234, 0.5));
         }
-        .img download{
-            margin-left: 200px;
+
+        .social-links a[title="GitHub"]:hover {
+            color: #171515;
+        }
+
+        .social-links a[title="LinkedIn"]:hover {
+            color: #0077b5;
+        }
+
+        .social-links a[title="WhatsApp"]:hover {
+            color: #25D366;
         }
 
         /* Footer */
@@ -499,11 +539,11 @@
                 <span></span>
             </div>
             <ul id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -511,8 +551,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <h1>Hi, I'm RAGAVENTHIRAN M</h1>
-        <p>Full Stack Developer | Freelancer </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <p><i class="fas fa-code"></i> Full Stack Developer | <i class="fas fa-laptop-code"></i> Freelancer </p>
+        <a href="#projects" class="btn"><i class="fas fa-briefcase"></i> View My Work</a>
     </section>
 
     <!-- About Section -->
@@ -546,12 +586,10 @@
                 <p class="date">2024 - 2026</p>
                 <p>Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, Software Engineering</p>
             </div>
-        <div class="education-grid">
             <div class="education-card">
                 <h3>Government Art's And science college Sathyamangalam</h3>
                 <p class="degree">Bachelor of Computer Applications</p>
                 <p class="date">2021 - 2024</p>
-                <!-- <p>Relevant coursework: Data Structures, Algorithms, Web Development, Database Management, Software Engineering</p> -->
             </div>
             <div class="education-card">
                 <h3>Government Tribal Higher Secondary School Hassanur</h3>
@@ -567,7 +605,6 @@
         <h2>My Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <!-- <div class="project-img">🚀</div> -->
                 <div class="project-content">
                     <h3>Organic Shop – E-Commerce Website</h3>
                     <p>A full-stack online store for organic products with user authentication, product catalog, and seamless shopping experience.</p>
@@ -584,7 +621,6 @@
             </div>
 
             <div class="project-card">
-                <!-- <div class="project-img">💡</div> -->
                 <div class="project-content">
                     <h3>Cake Shop – Freelance E-Commerce Website</h3>
                     <p>Online cake store with seamless browsing, cart, and checkout, built using MERN Stack.</p>
@@ -602,7 +638,6 @@
             </div>
 
             <div class="project-card">
-                <!-- <div class="project-img">🎨</div> -->
                 <div class="project-content">
                     <h3>Sathya Cotings – Construction Management App</h3>
                     <p>A mobile app for managing construction projects. My role included expense entry with full CRUD operations, enabling efficient tracking, updating, and management of project costs.</p>
@@ -627,26 +662,30 @@
             <p>I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out!</p>
             <div class="contact-info">
                 <div class="contact-item">
-                    📧 <a href="mailto:ragav9760@gmail.com">ragav9760@gmail.com</a>
+                    <i class="fas fa-envelope"></i> <a href="mailto:ragav9760@gmail.com">ragav9760@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    📱 <span>+91 6380962804</span>
+                    <i class="fas fa-phone"></i> <span>+91 6380962804</span>
                 </div>
                 <div class="contact-item">
-                    📍 <span>Coimbatore, Tamil Nadu, India</span>
+                    <i class="fas fa-map-marker-alt"></i> <span>Coimbatore, Tamil Nadu, India</span>
                 </div>
             </div>
             <div class="social-links">
-                <a href="https://github.com/Ragav8373" target="_blank" title="GitHub">⚙️</a>
-                <a href="https://www.linkedin.com/in/ragaventhiran" target="_blank" title="LinkedIn">💼</a>
-                <!-- <a href="#" target="_blank" title="Twitter">🐦</a> -->
+                <a href="https://github.com/Ragav8373" target="_blank" title="GitHub">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ragaventhiran" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/916380962804" target="_blank" title="WhatsApp">
+                    <i class="fa-brands fa-square-whatsapp"></i>
+                </a>
             </div>
         </div>
-          <div class="resume-btn-container">
-    <!-- Resume Download Button -->
-    <a href="resume.pdf" class="btn2">Download Resume</a>
-</div>
-
+        <div class="resume-btn-container">
+            <a href="resume.pdf" class="btn2"><i class="fas fa-download"></i> Download Resume</a>
+        </div>
     </section>
 
     <!-- Footer -->
